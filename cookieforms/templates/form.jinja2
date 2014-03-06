@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate your {{ owner }} / {{ repo }} using diecutter</title>
-    <link rel="stylesheet" media="screen" style="text/css" href="/static/opt/bootstrap.css" />
+    <link rel="stylesheet" media="screen" style="text/css" href="../../static/opt/bootstrap.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -34,7 +34,7 @@
                   <p>
                     <span id="diecutter_service_status" class="badge"><i class="icon-question-sign icon-white"></i></span>
                     <button id="diecutter_service_test"><span class="icon-refresh"></span> Test</button>
-                    <img class="loading" style="display:none;" src="/static/img/loader.gif" />
+                    <img class="loading" style="display:none;" src="../../static/img/loader.gif" />
                   </p>
                 </div>
               </div>
@@ -65,12 +65,12 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/static/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/underscore.js"></script>
-    <script type="text/javascript" src="/static/opt/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/static/opt/jsv.js"></script>
-    <script type="text/javascript" src="/static/jsonform.js"></script>
-    <script type="text/javascript" src="/static/cookieforms.js"></script>
+    <script type="text/javascript" src="../../static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/underscore.js"></script>
+    <script type="text/javascript" src="../../static/opt/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/opt/jsv.js"></script>
+    <script type="text/javascript" src="../../static/jsonform.js"></script>
+    <script type="text/javascript" src="../../static/cookieforms.js"></script>
     <script type="text/javascript">
       $('#cookiecutter_form').jsonForm({"schema": {{ form_schema|safe }},
         onSubmit: function (errors, values) {
