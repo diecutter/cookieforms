@@ -18,11 +18,14 @@ hello = Service(name='hello', path='/', description='Hello page')
 
 @hello.get()
 def get_hello(request):
-    return {'hello': 'Go to /{owner}/{repo}/',
-            'params': {'access_token': 'OAuth token',
-                       'ref': 'branch, tag or commit reference'},
-            'source': 'https://github.com/diecutter/cookieforms',
-            'version': pkg_resources.get_distribution(__package__).version}
+    return render_to_response(
+        'index.jinja2',
+        {'hello': 'Go to /{owner}/{repo}/',
+         'params': {'access_token': 'OAuth token',
+                    'ref': 'branch, tag or commit reference'},
+         'source': 'https://github.com/diecutter/cookieforms',
+         'version': pkg_resources.get_distribution(__package__).version},
+        request=request)
 
 
 rawfile = Service(name='cookieforms',
